@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "MStudent Hub",
+    "version": "1.0",
+    "description": "Monash Student Hub by Jenul Ferdinand",
+
+    "icons": {
+        "128": "assets/icons/icon128.png",
+        "48": "assets/icons/icon48.png",
+        "16": "assets/icons/icon16.png"
+    },
+  
+    "action": {
+      "default_icon": "assets/icons/icon16.png"
+    },
+  
+      "chrome_url_overrides": {
+        "newtab": "page.html"
+      },
+  
+    "permissions": [
+      "activeTab",
+      "geolocation",
+      "storage"
+    ],
+
+    "background": {
+        "scripts": ["link_manager.js"],
+        "persistent": false
+    }
+  }
