@@ -3,37 +3,24 @@ document.addEventListener("DOMContentLoaded", function() {
     // Load the link buttons from chrome storage
     loadMoodleLinks();
 
-    // Get and listen for click for the moodle link button
-    document.getElementById('addMoodleLinkButton').addEventListener('click', function() {
-        
-        // Prompt the user to enter a Moodle link
-        const moodleLink = prompt('Enter the Moodle link:');
-
-        // Add the moodle link if it exists
-        if (moodleLink) {
-            // Add the moodle links to chrome storage
-            addMoodleLink(moodleLink);
-
-            // Refresh the displayed links from chrome storage
-            loadMoodleLinks();
-        }
-    });
-
     // Add the moodle link to the chrome storage
-    function addMoodleLink(moodleLink) {
+    function addMoodleLink(moodleLink, unitName) {
         // Get existing links from Chrome Storage
-        chrome.storage.local.get({ moodleLinks: [] }, function(data) {
+        chrome.storage.local.get({ moodleLinks: [], unitNames: [] }, function(data) {
             const existingLinks = data.moodleLinks;
+            const existingUnitNames = data.unitNames;
 
             // Check if the link is not already in the array
             if (!existingLinks.includes(moodleLink)) {
-                // Add the new link to the array
+                // Add the new link and unit name to their respective arrays
                 existingLinks.push(moodleLink);
+                existingUnitNames.push(unitName);
 
-                // Save the updated array back to Chrome Storage
-                chrome.storage.local.set({ moodleLinks: existingLinks }, function() {
+                // Save the updated arrays back to Chrome Storage
+                chrome.storage.local.set({ moodleLinks: existingLinks, unitNames: existingUnitNames }, function() {
                     // Optionally, can perform additional actions after saving
                     console.log("Moodle link added to Chrome Storage:", moodleLink);
+                    console.log("Unit name added to Chrome Storage:", unitName);
 
                     // Refresh the displayed links from Chrome Storage
                     loadMoodleLinks();
@@ -41,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 // Optionally, notify the user or handle the case where the link already exists
                 console.log("Moodle link already exists in Chrome Storage:", moodleLink)
+                alert("This link already exists");
             }
         });
     }
@@ -48,38 +36,39 @@ document.addEventListener("DOMContentLoaded", function() {
     // Remove the moodle link from the chrome storage
     function removeMoodleLink(moodleLink) {
         // Remove from Chrome storage
-        chrome.storage.local.get("moodleLinks", function (data) {
+        chrome.storage.local.get({ moodleLinks: [], unitNames: [] }, function (data) {
             const updatedLinks = data.moodleLinks.filter(link => link !== moodleLink);
-            chrome.storage.local.set({ 'moodleLinks': updatedLinks });
+            const updatedUnitNames = data.unitNames.filter((_, index) => data.moodleLinks[index] !== moodleLink);
 
-            // Remove from the DOM
-            const buttonToRemove = document.querySelector(`button[data-link="${moodleLink}"]`);
-            if (buttonToRemove) {
-                buttonToRemove.remove();
-            }
+            chrome.storage.local.set({ 'moodleLinks': updatedLinks, 'unitNames': updatedUnitNames }, function() {
+                // Remove from the DOM
+                const buttonToRemove = document.querySelector(`button[data-link="${moodleLink}"]`);
+                if (buttonToRemove) {
+                    buttonToRemove.remove();
+                }
 
-            // Refresh the displayed links from chrome storage
-            loadMoodleLinks();
+                // Refresh the displayed links from Chrome Storage
+                loadMoodleLinks();
 
-            // DEBUG
-            console.log("Removed Moodle Link:", moodleLink);
+                // DEBUG
+                console.log("Removed Moodle Link:", moodleLink);
+            });
         });
-
-        
     }
 
     // Function to load Moodle links from storage and display them
     function loadMoodleLinks() {
-        // Get Moodle links from Chrome Storage
-        chrome.storage.local.get({ moodleLinks: [] }, function(data) {
+        // Get Moodle links and unit names from Chrome Storage
+        chrome.storage.local.get({ moodleLinks: [], unitNames: [] }, function(data) {
             const moodleLinks = data.moodleLinks;
+            const unitNames = data.unitNames;
 
             // Clear the existing buttons in the sidebar
             clearSidebar();
 
             // Create buttons for each Moodle link
-            moodleLinks.forEach(function(moodleLink) {
-                createMoodleLinkButton(moodleLink);
+            moodleLinks.forEach(function(moodleLink, index) {
+                createMoodleLinkButton(moodleLink, unitNames[index]);
             });
 
             // DEBUG
@@ -99,12 +88,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Add event listener to the "Add Moodle Link" button
         addMoodleLinkButton.addEventListener('click', function() {
-            // Prompt the user to enter a Moodle link
+            // Prompt the user to enter a Moodle link and a Unit name
             const moodleLink = prompt('Enter the Moodle link:');
+            const unitName = prompt('Enter Unit name:');
 
             // Add the moodle link if it exists
             if (moodleLink) {
-                addMoodleLink(moodleLink);
+                addMoodleLink(moodleLink, unitName);
             }
         });
 
@@ -113,9 +103,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to create a button for a Moodle link
-    function createMoodleLinkButton(moodleLink) {
+    function createMoodleLinkButton(moodleLink, unitName) {
         var button = document.createElement("button");
-        button.textContent = "Unit Link";
+        button.textContent = unitName || "Unit Link"; // Use unitName if available, otherwise default to "Unit Link"
         button.dataset.link = moodleLink;
 
         button.addEventListener("mousedown", function (event) {
