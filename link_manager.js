@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             loadMoodleLinks();
         }
     });
+    
 
     // Add the moodle link to the chrome storage
     function addMoodleLink(moodleLink) {
