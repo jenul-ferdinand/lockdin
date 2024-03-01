@@ -29,7 +29,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Display a random funny quote
     document.getElementById('quote').textContent = getRandomQuote();
-
-    
-
 });
