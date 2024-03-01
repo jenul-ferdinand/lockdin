@@ -25,6 +25,6 @@
     ],
 
     "background": {
-        "content_scripts": ["link_manager.js"]
+        "content_scripts": ["scripts/link_manager.js"]
     }
   }
