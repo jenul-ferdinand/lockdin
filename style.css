@@ -73,3 +73,45 @@ button {
 button:hover {
     background-color: #777;
 }
+
+#timer {
+  text-align: center;
+  margin-top: 50px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 330px;
+}
+
+#time {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#timerButtons {
+  height: 80px;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.timerButton {
+  width: 100px;
+  text-align: center;
+}
+
+#customButton {
+  margin-top: 0px;
+  text-align: center;
+}
+
+#pauseButton {
+  text-align: center;
+}
