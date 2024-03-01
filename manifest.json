@@ -14,9 +14,9 @@
       "default_icon": "assets/icons/icon16.png"
     },
   
-      "chrome_url_overrides": {
-        "newtab": "page.html"
-      },
+    "chrome_url_overrides": {
+      "newtab": "page.html"
+    },
   
     "permissions": [
       "activeTab",
