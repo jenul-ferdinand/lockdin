@@ -51,7 +51,6 @@ body {
     overflow-x: hidden;
   }
 
-
 #content {
     margin-left: 200px;
     padding: 16px;
@@ -95,23 +94,106 @@ button {
   font-size: 16px;
 }
 
-#timerButtons {
+#timer-buttons {
   height: 80px;
   justify-content: center;
   gap: 15px;
   margin-bottom: 5px;
 }
 
-.timerButton {
+.timer-button {
   width: 100px;
   text-align: center;
 }
 
-#customButton {
+#custom-button {
   margin-top: 0px;
   text-align: center;
 }
 
-#pauseButton {
+#pause-button {
   text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: grey;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  height: auto;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.75rem;
+  font-weight: bold;
+  width: auto;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+#custom-modal-heading {
+  margin-bottom: 500px;
+}
+
+#custom-modal-input {
+  margin-bottom: 10px;
+}
+
+/*
+#save-button {
+  width: 100px;
+  display: flex;
+  margin-right: auto;
+}
+*/
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }

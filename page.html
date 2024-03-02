@@ -16,13 +16,29 @@
           <div id="quote"></div>
             <div id="timer">
                 <div id="time">25:00</div>
-                <span id="timerButtons" class="flex-container">
-                    <button id="startButton" class="timerButton">Start</button>
-                    <button id="pauseButton" class="timerButton">Pause</button>
-                    <button id="resetButton" class="timerButton">Reset</button>
+                <span id="timer-buttons" class="flex-container">
+                    <button id="start-button" class="timer-button">Start</button>
+                    <button id="pause-button" class="timer-button">Pause</button>
+                    <button id="reset-button" class="timer-button">Reset</button>
                 </span>
-                <button id="customButton">Custom</button>
+                <button data-modal-target="#modal" id="custom-button">Custom</button>
             </div>
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Enter Custom Timer</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <b class="custom-modal-heading">Study</b>
+                <input id="custom-modal-input-study" type="number">
+                <b class="custom-modal-heading">Break</b>
+                <input id="custom-modal-input-break" type="number">
+            </div>
+            <div class="modal-footer">
+                <button data-close-button id="custom-save-button">Save</button>
+            </div>
+        </div>
+        <div id="overlay"></div>
         </div>
         <div class="flex-item" id="todo">
           
