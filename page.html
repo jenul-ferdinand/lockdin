@@ -11,15 +11,39 @@
             <button id="addMoodleLinkButton">Add Moodle Link</button>
         </div>
 
-
-
         <div class="flex-item" id="pomodoro">
-          <!-- Main content goes here -->
-          <div id="date"></div>
-          <div id="quote"></div>
+            <!-- Main content goes here -->
+            <div id="date"></div>
+            <div id="quote"></div>
+            <div id="timer">
+            <div id="time">25:00</div>
+            <span id="timer-buttons" class="flex-container">
+                <button id="start-button" class="timer-button">Start</button>
+                <button id="pause-button" class="timer-button">Pause</button>
+                <button id="reset-button" class="timer-button">Reset</button>
+            </span>
+            <button data-modal-target="#modal" id="custom-button">Custom</button>
         </div>
 
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Enter Custom Timer</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <b class="custom-modal-heading">Study</b>
+                <input id="custom-modal-input-study" type="number">
+                <b class="custom-modal-heading">Break</b>
+                <input id="custom-modal-input-break" type="number">
+            </div>
+            <div class="modal-footer">
+                <button data-close-button id="custom-save-button">Save</button>
+            </div>
+        </div>
 
+        <div id="overlay"></div>
+
+        </div> <!--WHERE THE FUCK DOES THIS DIV LINK TO???-->
 
         <div class="flex-item" id="right-container">
             <!-- Pages -->
@@ -43,15 +67,11 @@
                     <li><a href="https://eassessment.monash.edu/my/" target="_blank">eAssessment</a></li>
                     <li><a href="https://learning.monash.edu/my/" target="_blank">Monash Dashboard</a></li>
                 </ul>
-            
-            
-
             </div>
 
             <!-- Calendar Page -->
             <div class="page" id="page3">
                 Page 3
-            
             </div>
 
             <!-- Pagination Dots -->

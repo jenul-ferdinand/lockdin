@@ -39,6 +39,21 @@ body {
 .flex-item {
     padding: 20px;
 }
+  
+#sidebar {
+    background-color: #333;
+    overflow-x: hidden; 
+  }
+
+#todo {
+    background-color: grey;
+    overflow-x: hidden;
+  }
+
+#content {
+    margin-left: 200px;
+    padding: 16px;
+}
 
 .flex-item:nth-child(1), .flex-item:nth-child(3) {
     flex: 1; 
@@ -46,4 +61,133 @@ body {
 
 .flex-item:nth-child(2) {
     flex: 2; 
+}
+
+button:hover {
+    background-color: #777;
+}
+
+#timer {
+  text-align: center;
+  margin-top: 50px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 330px;
+}
+
+#time {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#timer-buttons {
+  height: 80px;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.timer-button {
+  width: 100px;
+  text-align: center;
+}
+
+#custom-button {
+  margin-top: 0px;
+  text-align: center;
+}
+
+#pause-button {
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: grey;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  height: auto;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.75rem;
+  font-weight: bold;
+  width: auto;
+  margin: 0;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+#custom-modal-heading {
+  margin-bottom: 500px;
+}
+
+#custom-modal-input {
+  margin-bottom: 10px;
+}
+
+/*
+#save-button {
+  width: 100px;
+  display: flex;
+  margin-right: auto;
+}
+*/
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
