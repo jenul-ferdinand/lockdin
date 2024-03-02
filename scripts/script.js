@@ -99,10 +99,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function resetTimer() {
         clearInterval(timer);
-        console.log("running1"); //check
         if (typeof studyTimeSeconds === 'undefined') {
             timeLeft = 25 * 60;
-            console.log("inside"); //check
         }
         else {
             timeLeft = studyTimeSeconds;
@@ -179,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function () {
         window.breakTimeSeconds = breakTime * 60;
 
         resetTimer();
-        startTimer();
     }
 
     saveButton.addEventListener('click', saveTimerValues);
