@@ -18,6 +18,7 @@
 
         <!-- POMODORO -->
         <div class="flex-item" id="pomodoro">
+            <h1 id="center-title">LockdIn</h1>
             <div id="date"></div>
             <div id="quote"></div>
             <div id="timer">
@@ -52,7 +53,6 @@
         <!-- ==== RIGHT SIDEBAR ==== -->
         <div class="flex-item" id="right-container">
             <!-- PAGES -->
-
             <!-- To-do Page -->
             <div class="page" id="page1">
                   <h2>✅ TODO</h2>
@@ -85,8 +85,15 @@
                 <span class="dot" onclick="moveToPage(2)"></span>
                 <span class="dot" onclick="moveToPage(3)"></span>
             </div>
+
+            <!-- Page Arrows -->
+            <!-- Left Arrow -->
+            <img src="assets/rightbar/right-arrow.png" class="page-arrow" id="left-arrow" alt="Left Arrow" style="transform: rotate(180deg);">
+
+            <!-- Right Arrow -->
+            <img src="assets/rightbar/right-arrow.png" class="page-arrow" id="right-arrow" alt="Right Arrow">
+        </div>
     </div>
-    
     <!-- Stylesheets and Scripts -->
     <link rel="stylesheet" href="page.css">
     <link rel="stylesheet" href="rightbar.css">

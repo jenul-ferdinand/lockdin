@@ -1,4 +1,3 @@
-
 .page {
     display: none;
 }
@@ -56,6 +55,10 @@
     box-sizing: border-box;
     overflow-y: auto; 
     resize: none; 
+}
+
+#addTaskButton {
+    border-radius: 5px;
 }
 
 .task-item {
@@ -123,7 +126,7 @@ button:hover {
 
 #page2 h2 {
     margin-bottom: 16px;
-    color: #333; /* Adjust the color as per your theme */
+    color: #333; 
 }
 
 .essential-links {
@@ -133,22 +136,39 @@ button:hover {
 }
 
 .essential-links li {
-    margin-bottom: 10px; /* Space between links */
+    margin-bottom: 10px;
 }
 
 .essential-links li a {
     display: block;
     padding: 10px;
-    background-color: #f0f0f0; /* Light grey background */
-    color: #007bff; /* Blue link color */
+    background-color: #f0f0f0; 
+    color: #007bff; 
     text-decoration: none;
-    border-radius: 5px; /* Rounded corners for the link background */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .essential-links li a:hover, .essential-links li a:focus {
-    background-color: #e9e9e9; /* Slightly darker on hover/focus */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Larger shadow on hover/focus */
+    background-color: #e9e9e9; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+
+.page-arrow {
+    cursor: pointer; 
+    position: absolute;
+    top: 95%; 
+    width: 40px;
+    height: 40px; 
+}
+
+#right-arrow {
+    margin-left: 82%;
+}
+
+#left-arrow {
+    margin-right: 5%;
+}
+
 
