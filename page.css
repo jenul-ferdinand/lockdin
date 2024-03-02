@@ -6,7 +6,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #282c34;
+    background-color: rgb(43, 43 ,43); 
     color: white;
 }
 
@@ -27,14 +27,6 @@ body {
     font-size: 1.2em;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #282c34;
-    color: white;
-}
-
 .flex-container {
     display: flex;
     height: 100vh;
@@ -47,11 +39,6 @@ body {
 #sidebar {
     background-color: #333;
     overflow-x: hidden; 
-  }
-
-#todo {
-    background-color: grey;
-    overflow-x: hidden;
   }
 
 #content {

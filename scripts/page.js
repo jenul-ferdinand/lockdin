@@ -1,9 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to get the current date
+
+
+    
+    // FUNCTION: Returns current date as string
     function getCurrentDate() {
         const today = new Date();
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         return today.toLocaleDateString('en-US', options);
+    }
+
+    // FUNCTION: Returns a random string from monashFacts list
+    function getRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * monashFacts.length);
+        return monashFacts[randomIndex];
     }
 
     // Array of Monash University facts
@@ -18,12 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         "Diverse student body for an inclusive academic environment."
     ];
 
-    // Function to get a random quote
-    function getRandomQuote() {
-        const randomIndex = Math.floor(Math.random() * monashFacts.length);
-        return monashFacts[randomIndex];
-    }
-
     // Display the current date
     document.getElementById('date').textContent = getCurrentDate();
 
@@ -31,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('quote').textContent = getRandomQuote();
     
 
+
+    // Pomodoro properties
     let timer;
     let timeLeft = 25 * 60; // Initial time: 25 minutes, will make custom
     let timerRunning = false;
@@ -41,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const startButton = document.getElementById('start-button');
     const resetButton = document.getElementById('reset-button');
     const pauseButton = document.getElementById('pause-button');
-    //const customButton = document.getElementById('custom-button');
 
+    // FUNCTION: Display pomodoro time left
     function displayTimeLeft(seconds) {
         const minutes = Math.floor(seconds / 60);
         const remainderSeconds = seconds % 60;
@@ -50,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         timeDisplay.textContent = display;
     }
 
+    // FUNCTION: Pomodoro run timer
     function runTimer() {
         timer = setInterval(() => {
             timeLeft -= 1;
@@ -75,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1000);
     }
 
+    // FUNCTION: Start pomodoro
     function startTimer() {
         if (!timerRunning) { 
             timerRunning = true;
@@ -83,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // FUNCTION: Pause pomodoro
     function pauseTimer() {
         if (!paused) {
             clearInterval(timer);
@@ -97,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // FUNCTION: Reset pomodoro
     function resetTimer() {
         clearInterval(timer);
         if (typeof studyTimeSeconds === 'undefined') {
@@ -112,11 +121,12 @@ document.addEventListener('DOMContentLoaded', function () {
         pauseButton.textContent = 'Pause';
     }
 
+    // Add event listeners for pomdoro functions
     startButton.addEventListener('click', startTimer);
     pauseButton.addEventListener('click', pauseTimer);
     resetButton.addEventListener('click', resetTimer);
 
-
+    // POMODORO MODAL SETTINGS
     const openModalButtons = document.querySelectorAll('[data-modal-target]');
     const closeModalButtons = document.querySelectorAll('[data-close-button]');
     const overlay = document.getElementById('overlay');

@@ -40,6 +40,6 @@
     ],
 
     "background": {
-        "content_scripts": ["scripts/link_manager.js"]
+        "content_scripts": ["scripts/units.js"]
     }
   }
