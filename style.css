@@ -45,11 +45,6 @@ body {
     overflow-x: hidden; 
   }
 
-#todo {
-    background-color: grey;
-    overflow-x: hidden;
-  }
-
 #content {
     margin-left: 200px;
     padding: 16px;
