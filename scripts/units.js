@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Load the link buttons from chrome storage
     loadMoodleLinks();
 
-    // Add the moodle link to the chrome storage
+    // FUNCTION: Add the moodle link to the chrome storage
     function addMoodleLink(moodleLink, unitName) {
         // Get existing links from Chrome Storage
         chrome.storage.local.get({ moodleLinks: [], unitNames: [] }, function(data) {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Remove the moodle link from the chrome storage
+    // FUNCTION: Remove the moodle link from the chrome storage
     function removeMoodleLink(moodleLink) {
         // Remove from Chrome storage
         chrome.storage.local.get({ moodleLinks: [], unitNames: [] }, function (data) {
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Function to load Moodle links from storage and display them
+    // FUNCTION: load Moodle links from storage and display them
     function loadMoodleLinks() {
         // Get Moodle links and unit names from Chrome Storage
         chrome.storage.local.get({ moodleLinks: [], unitNames: [] }, function(data) {
@@ -76,10 +76,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Function to clear the sidebar
+    // FUNCTION: Clear the side bar
     function clearSidebar() {
+        // Get the side bar element 
         const sidebar = document.getElementById("sidebar");
+    
+        // Clear the side bar
         sidebar.innerHTML = "";
+
+        // Create the heading
+        const heading = document.createElement('h1');
+        heading.innerHTML = "Monash Units 📘";
+        heading.style.textAlign = "right"
 
         // Recreate the "Add Moodle Link" button
         const addMoodleLinkButton = document.createElement("button");
@@ -98,11 +106,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+        // Append the heading to the sidebar
+        sidebar.appendChild(heading)
         // Append the "Add Moodle Link" button to the sidebar
         sidebar.appendChild(addMoodleLinkButton);
     }
 
-    // Function to create a button for a Moodle link
+    // FUNCTION: Create a button for a Moodle link
     function createMoodleLinkButton(moodleLink, unitName) {
         var button = document.createElement("button");
         button.textContent = unitName || "Unit Link"; // Use unitName if available, otherwise default to "Unit Link"
@@ -124,5 +134,4 @@ document.addEventListener("DOMContentLoaded", function() {
         const sidebar = document.getElementById("sidebar");
         sidebar.appendChild(button);
     }
-
 });

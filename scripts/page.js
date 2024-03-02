@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const resetButton = document.getElementById('reset-button');
     const pauseButton = document.getElementById('pause-button');
 
+    // FUNCTION: Change Logo Type
+    function logoOn(bool) {
+        var logo = document.getElementById("logo");
+
+        if (bool) { logo.src = "assets/page/logo-on.png" } else { logo.src = "assets/page/logo-off.png" }
+    }
+
     // FUNCTION: Display pomodoro time left
     function displayTimeLeft(seconds) {
         const minutes = Math.floor(seconds / 60);
@@ -52,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
             timerRunning = true;
             paused = false;
             runTimer();
+
+            logoOn(true);
         }
     }
 
@@ -62,11 +71,15 @@ document.addEventListener('DOMContentLoaded', function () {
             paused = true;
             timerRunning = false;
             pauseButton.textContent = 'Resume';
+
+            logoOn(false);
         }
         else {
             pauseButton.textContent = 'Pause';
             paused = false;
             startTimer();
+
+            logoOn(true);
         }
     }
 
@@ -84,6 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
         paused = false;
         rest = false;
         pauseButton.textContent = 'Pause';
+
+        logoOn(false);
     }
 
     // Add event listeners for pomdoro functions
