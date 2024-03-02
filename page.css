@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 * {
-  font-family: "Roboto", sans-serif;
+	font-family: "JetBrains Mono", monospace;
+	font-weight: 800;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(43, 43 ,43); 
-    color: white;
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(43, 43 ,43);
+	color: white;
+}
+
+h1 {
+	font-weight: 900;
 }
 
 #title {
-    text-align: center;
+	text-align: center;
 }
 
 #titlecard {
@@ -23,9 +30,9 @@ body {
 
 .logo-container {
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -55%);
 }
 
 #logo {
@@ -34,22 +41,22 @@ body {
 }
 
 .flex-container {
-    display: flex;
-    height: 100vh;
+	display: flex;
+	height: 100vh;
 }
 
 .flex-item {
-    padding: 20px;
+	padding: 20px;
 }
-  
+
 #sidebar {
-    background-color: #333;
-    overflow-x: hidden; 
+	background-color: #333;
+	overflow-x: hidden;
   }
 
 #content {
-    margin-left: 200px;
-    padding: 16px;
+	margin-left: 200px;
+	padding: 16px;
 }
 
 #addMoodleLinkButton {
@@ -57,20 +64,20 @@ body {
 }
 
 .flex-item:nth-child(1), .flex-item:nth-child(3) {
-    flex: 1; 
+	flex: 1;
 }
 
 .flex-item:nth-child(2) {
-    flex: 2; 
+	flex: 2;
 }
 
 button:hover {
-    background-color: #777;
+	background-color: #777;
 }
 
 #center-title {
   text-align: center;
-  color: darkcyan; 
+  color: darkcyan;
   margin: 20px 0;
   padding: 5px;
   font-size: 2em;
@@ -104,7 +111,6 @@ button {
   font-weight: bold;
   background-color: #1E90FF;
   text-align: center;
-  text-transform: uppercase;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
