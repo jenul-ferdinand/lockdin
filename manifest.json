@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "MStudent Hub",
+    "name": "LockdIn",
     "version": "1.0",
-    "description": "Monash Student Hub by Jenul Ferdinand",
+    "description": "Productivity Extension with Landing Page. Built for Monash University Students",
 
     "icons": {
         "128": "assets/icons/icon128.png",
@@ -14,9 +14,9 @@
       "default_icon": "assets/icons/icon16.png"
     },
   
-      "chrome_url_overrides": {
-        "newtab": "page.html"
-      },
+    "chrome_url_overrides": {
+      "newtab": "page.html"
+    },
   
     "permissions": [
       "activeTab",
@@ -25,7 +25,6 @@
     ],
 
     "background": {
-        "scripts": ["link_manager.js"],
-        "persistent": false
+        "content_scripts": ["scripts/link_manager.js"]
     }
   }

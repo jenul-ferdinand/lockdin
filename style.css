@@ -21,24 +21,23 @@ body {
 
 #quote {
     font-size: 1.2em;
+}
 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #282c34;
+    color: white;
 }
 
 .flex-container {
-    display: flex; 
-    height: 100vh; 
-  }
-  
-.flex-item { 
-    padding: 20px;
-  }
-
-.flex-item:nth-child(1), .flex-item:nth-child(3) {
-  flex: 1; /* The first and third flex items (side columns) will take up 25% */
+    display: flex;
+    height: 100vh;
 }
 
-.flex-item:nth-child(2) {
-  flex: 2; /* The second flex item (middle column) will take up 50% */
+.flex-item {
+    padding: 20px;
 }
   
 #sidebar {
@@ -56,17 +55,12 @@ body {
     padding: 16px;
 }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #555;
-    color: white;
-    border: none;
-    text-align: left;
-    text-decoration: none;
-    cursor: pointer;
+.flex-item:nth-child(1), .flex-item:nth-child(3) {
+    flex: 1; 
+}
+
+.flex-item:nth-child(2) {
+    flex: 2; 
 }
 
 button:hover {
