@@ -11,13 +11,28 @@
     },
   
     "action": {
-      "default_icon": "assets/icons/icon16.png"
+      "default_icon": "assets/icons/icon16.png",
+      "default_popup": "popup.html"
     },
+
+    "content_scripts":[
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "scripts/thumbcommon.js",
+        "scripts/thumbinject.js"
+      ],
+      "run_at": "document_start"}],
   
     "chrome_url_overrides": {
       "newtab": "page.html"
     },
-  
+    "options_ui": {
+      "page": "popup.html",
+      "browser_style": true
+    },
     "permissions": [
       "activeTab",
       "geolocation",
