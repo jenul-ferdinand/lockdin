@@ -11,16 +11,23 @@
 
 <body>
     <div class="flex-container">
+        
         <!-- LEFT SIDEBAR -->
         <div class="flex-item" id="sidebar">
-            <button id="addMoodleLinkButton">Add Moodle Link</button>
+            <button id="add-moodle-link-button">Add Moodle Link</button>
         </div>
 
-        <!-- POMODORO -->
+        <!-- MIDDLE PANE -->
         <div class="flex-item" id="pomodoro">
-            <h1 id="center-title">LockdIn</h1>
-            <div id="date"></div>
-            <div id="quote"></div>
+			<!-- Top Title Card -->
+            <img id="titlecard" src="assets/page/title-card.png">
+
+			<!-- Center Logo-->
+			<div class="logo-container">
+				<img id="logo" src="assets/page/logo-off.png">
+			</div>
+            
+			<!-- Pomodoro -->
             <div id="timer">
                 <div id="time">25:00</div>
                 <span id="timer-buttons" class="flex-container">
@@ -88,12 +95,13 @@
 
             <!-- Page Arrows -->
             <!-- Left Arrow -->
-            <img src="assets/rightbar/right-arrow.png" class="page-arrow" id="left-arrow" alt="Left Arrow" style="transform: rotate(180deg);">
+            <img src="assets/page/rightbar/right-arrow.png" class="page-arrow" id="left-arrow" alt="Left Arrow" style="transform: rotate(180deg);">
 
             <!-- Right Arrow -->
-            <img src="assets/rightbar/right-arrow.png" class="page-arrow" id="right-arrow" alt="Right Arrow">
+            <img src="assets/page/rightbar/right-arrow.png" class="page-arrow" id="right-arrow" alt="Right Arrow">
         </div>
     </div>
+
     <!-- Stylesheets and Scripts -->
     <link rel="stylesheet" href="page.css">
     <link rel="stylesheet" href="rightbar.css">

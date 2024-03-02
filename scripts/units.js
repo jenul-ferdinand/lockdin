@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var button = document.createElement("button");
         button.textContent = unitName || "Unit Link"; // Use unitName if available, otherwise default to "Unit Link"
         button.dataset.link = moodleLink;
+        button.classList.add("moodle-link");
 
         button.addEventListener("mousedown", function (event) {
             // Check if the middle mouse button is clicked (button value 1)

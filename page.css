@@ -1,8 +1,12 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #282c34;
+    background-color: rgb(43, 43 ,43); 
     color: white;
 }
 
@@ -10,13 +14,23 @@ body {
     text-align: center;
 }
 
-#date {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+#titlecard {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
-#quote {
-    font-size: 1.2em;
+.logo-container {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+#logo {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .flex-container {
@@ -84,6 +98,36 @@ button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
+}
+
+#addMoodleLinkButton {
+  font-weight: bold;
+  background-color: #1E90FF;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property:box-shadow, transform;
+}
+
+.moodle-link {
+  background-color: #f0f0f0;
+  color: #007bff;
+  margin: 8px, 0px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners for the link background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+#addMoodleLinkButton:hover, #addMoodleLinkButton:focus, #addMoodleLinkButton:active {
+  box-sizing: 0 0 20px rbga(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #timer-buttons {
