@@ -10,17 +10,11 @@ body {
     text-align: center;
 }
 
-#quote-container {
-    text-align: center;
-}
-
-#date {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-#quote {
-    font-size: 1.2em;
+#titlecard {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
 .flex-container {
