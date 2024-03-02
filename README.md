@@ -1,5 +1,7 @@
 # LockdIn (Chrome Extension)
 
+
+
 ## Goal
 
 LockdIn aims to enhance the productivity of Monash University students by eliminating distractions and prioritizing academic content in the Chrome browser.
@@ -8,7 +10,7 @@ LockdIn aims to enhance the productivity of Monash University students by elimin
 
 LockdIn functions as a Chrome Extension, serving as a new tab override that presents a dedicated landing page each time you open a new tab.
 
-Additionally, LockdIn has established a partnership with Redactive AI to safeguard against unwanted distractions, ensuring an optimal environment for productivity and focused study sessions.
+<img src="assets/readme/landing-page.png" width=70% style="display: block; margin: 0 auto" />
 
 ## Usage
 
