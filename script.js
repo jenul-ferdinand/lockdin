@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let timeLeft = 25 * 60; // Initial time: 25 minutes, will make custom
     let timerRunning = false;
     let paused = false;
+    let rest = false;
 
     const timeDisplay = document.getElementById('time');
     const startButton = document.getElementById('startButton');
@@ -48,46 +49,63 @@ document.addEventListener('DOMContentLoaded', function () {
         timeDisplay.textContent = display;
     }
 
-    function startTimer() {
-        if (!timerRunning) {
-            if (paused) {
-                timeLeft -= Math.floor((Date.now() - startTime) / 1000);
-            }   
-            timer = setInterval(() => {
-                timeLeft--;
-                if (timeLeft < 0) {
-                    clearInterval(timer);
-                    alert('Time\'s up!');
-                    resetTimer();
+    function runTimer() {
+        timer = setInterval(() => {
+            timeLeft -= 1;
+            if (timeLeft < 0) {
+                timerRunning = false;
+                clearInterval(timer);
+                if (!rest) {
+                    rest = true;
+                    //timeLeft = 5 * 60;
+                    timeLeft = 5;
+                    alert('Break!');
+                }
+                else {
+                    rest = false;
+                    timeLeft = 25 * 60;
+                    alert('Begin!');
                 }
                 displayTimeLeft(timeLeft);
-            }, 1000);
+                startTimer();
+            }
+            else {
+                displayTimeLeft(timeLeft);
+            }
+        }, 1000);
+    }
+
+    function startTimer() {
+        if (!timerRunning) { 
             timerRunning = true;
             paused = false;
+            runTimer();
         }
     }
 
     function pauseTimer() {
         if (timerRunning) {
             clearInterval(timer);
-            startTime = Date.now();
             paused = true;
             timerRunning = false;
             pauseButton.textContent = 'Resume';
             document.getElementById("pauseButton").style.textAlign = "center";
         }
         else {
-            startTimer();
             pauseButton.textContent = 'Pause';
+            timerRunning = true;
+            startTimer();
         }
     }
 
     function resetTimer() {
         clearInterval(timer);
-        timeLeft = 25 * 60;
+        // timeLeft = 25 * 60;
+        timeLeft = 5;
         displayTimeLeft(timeLeft);
         timerRunning = false;
         paused = false;
+        rest = false;
         pauseButton.textContent = 'Pause';
     }
 
