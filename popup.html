@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <form>
+      
+      
+      <p data-i18n="options_thumbnail_mode">Thumbnail display mode</p>
+      <input type="radio" name="thumbnailMode" id="blurred" value="blurred">
+      <label for="blurred" data-i18n="options_thumbnail_blurred">Blurred</label><br />
+      <input type="radio" name="thumbnailMode" id="normal" value="normal">
+      <label for="normal" data-i18n="options_thumbnail_normal">Normal</label><br />
+      <br />
+      <p data-i18n="options_setting_storage">Setting storage</p>
+      <input type="checkbox" name="syncSettings" id="syncSettings">
+      <label for="syncSettings" data-i18n="options_sync">Sync browser settings</label><br />
+      <br />
+      <p id="status">✅ <span data-i18n="options_loaded">Preferences loaded</span></p>
+    </form>
+    <script src="scripts/thumbcommon.js"></script>
+    <script src="scripts/options.js"></script>
+  </body>
+</html>

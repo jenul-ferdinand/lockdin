@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MStudent Hub</title>
+    <title>LockdIn</title>
 </head>
 <body>
     <div class="flex-container">
@@ -12,12 +12,67 @@
         </div>
 
         <div class="flex-item" id="pomodoro">
-          <!-- Main content goes here -->
-          <div id="date"></div>
-          <div id="quote"></div>
+            <!-- Main content goes here -->
+            <div id="date"></div>
+            <div id="quote"></div>
+            <div id="timer">
+            <div id="time">25:00</div>
+            <span id="timer-buttons" class="flex-container">
+                <button id="start-button" class="timer-button">Start</button>
+                <button id="pause-button" class="timer-button">Pause</button>
+                <button id="reset-button" class="timer-button">Reset</button>
+            </span>
+            <button data-modal-target="#modal" id="custom-button">Custom</button>
         </div>
 
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Enter Custom Timer</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <b class="custom-modal-heading">Study</b>
+                <input id="custom-modal-input-study" type="number">
+                <b class="custom-modal-heading">Break</b>
+                <input id="custom-modal-input-break" type="number">
+            </div>
+            <div class="modal-footer">
+                <button data-close-button id="custom-save-button">Save</button>
+            </div>
+        </div>
 
+        <div id="overlay"></div>
+
+        </div> <!--WHERE THE FUCK DOES THIS DIV LINK TO???-->
+
+        <div class="flex-item" id="right-container">
+            <!-- Pages -->
+
+            <!-- To-do Page -->
+            <div class="page" id="page1"> 
+                <h2>Moo-Do List</h2>
+                <ul class="todo-list">
+                  <!--Add new task <li> -->
+                </ul>
+                <button type="submit" id="addTaskButton">Add Task</button>
+              </div>
+
+            <!-- Essential Links -->
+            <div class="page" id="page2"> 
+              <h2>Essential Links</h2>
+                <ul class="essential-links">
+                    <li><a href="https://my.monash/campusm/home#menu" target="_blank">my.monash Home Page</a></li>
+                    <li><a href="https://www.monash.edu/students/admin/timetables/allocate/login" target="_blank">Allocate+</a></li>
+                    <li><a href="https://my.monash.edu/wes/" target="_blank">WES</a></li>
+                    <li><a href="https://eassessment.monash.edu/my/" target="_blank">eAssessment</a></li>
+                    <li><a href="https://learning.monash.edu/my/" target="_blank">Monash Dashboard</a></li>
+                </ul>
+            </div>
+
+            <!-- Calendar Page -->
+            <div class="page" id="page3">
+                Page 3
+            </div>
 
         <div class="flex-item" id="todo">
             <div class="todo-container"> 
@@ -26,18 +81,23 @@
                 <!--Add new task <li> -->
               </ul>
               <button type="submit" id="addTaskButton">Add Task</button>
+
+            <!-- Pagination Dots -->
+            <div class="pagination">
+              <span class="dot" onclick="moveToPage(1)"></span>
+              <span class="dot" onclick="moveToPage(2)"></span>
+              <span class="dot" onclick="moveToPage(3)"></span>
             </div>
         </div>
-
-
     </div>
-
     
-
+    <!-- Stylesheets and Scripts -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="right-column.css">
     <script src="scripts/script.js"></script>
     <script src="scripts/link_manager.js"></script>
     <script src="scripts/todo.js"></script>
+    <script src="scripts/right-column.js"></script>
 </body>
 </html>
 
