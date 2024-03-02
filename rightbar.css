@@ -30,7 +30,7 @@
 }
 
 #right-container {
-    background-color: grey; 
+    background-color: #333; 
     overflow: hidden;
     position: relative;
 }
