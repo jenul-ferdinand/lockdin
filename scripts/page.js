@@ -1,40 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-
-    
-    // FUNCTION: Returns current date as string
-    function getCurrentDate() {
-        const today = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        return today.toLocaleDateString('en-US', options);
-    }
-
-    // FUNCTION: Returns a random string from monashFacts list
-    function getRandomQuote() {
-        const randomIndex = Math.floor(Math.random() * monashFacts.length);
-        return monashFacts[randomIndex];
-    }
-
-    // Array of Monash University facts
-    const monashFacts = [
-        "Named after WWI hero Sir John Monash.",
-        "Australia's large university with global impact.",
-        "Medical breakthroughs and healthcare leader.",
-        "Global presence with campuses worldwide.",
-        "Innovation hub in the Monash Technology Precinct.",
-        "Ties to Nobel laureates and academic excellence.",
-        "Prioritizes sustainability and cutting-edge research.",
-        "Diverse student body for an inclusive academic environment."
-    ];
-
-    // Display the current date
-    document.getElementById('date').textContent = getCurrentDate();
-
-    // Display a random funny quote
-    document.getElementById('quote').textContent = getRandomQuote();
-    
-
-
     // Pomodoro properties
     let timer;
     let timeLeft = 25 * 60; // Initial time: 25 minutes, will make custom
