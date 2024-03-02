@@ -19,10 +19,17 @@
             <button id="add-moodle-link-button">Add Moodle Link</button>
         </div>
 
-        <!-- POMODORO -->
+        <!-- MIDDLE PANE -->
         <div class="flex-item" id="pomodoro">
+			<!-- Top Title Card -->
             <img id="titlecard" src="assets/page/title-card.png">
+
+			<!-- Center Logo-->
+			<div class="logo-container">
+				<img id="logo" src="assets/page/logo-off.png">
+			</div>
             
+			<!-- Pomodoro -->
             <div id="timer">
                 <div id="time">25:00</div>
                 <span id="timer-buttons" class="flex-container">
@@ -88,7 +95,8 @@
                 <span class="dot" onclick="moveToPage(2)"></span>
                 <span class="dot" onclick="moveToPage(3)"></span>
             </div>
-    </div>
+    	</div>
+	</div> <!-- <- New closing div -->
     
     <!-- Stylesheets and Scripts -->
     <link rel="stylesheet" href="page.css">
