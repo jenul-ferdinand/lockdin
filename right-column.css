@@ -88,8 +88,7 @@
     justify-content: center;
     border-radius: 50%;
     padding: 0;
-    margin: 0px 0px 0px 10px;
-    
+    margin: 0px 0px 0px 10px; 
 }
 
 .delete-task-button:hover {
@@ -111,6 +110,11 @@ button {
 
 button:hover {
     background-color: #777;
+}
+
+#page1 {
+    display: block;
+    overflow-x: hidden;
 }
 
 #page2 {

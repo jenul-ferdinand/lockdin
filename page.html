@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE OF EVERY TAB -->
     <title>LockdIn</title>
 </head>
+
 <body>
     <div class="flex-container">
+        <!-- LEFT SIDEBAR -->
         <div class="flex-item" id="sidebar">
             <button id="addMoodleLinkButton">Add Moodle Link</button>
         </div>
 
+        <!-- POMODORO -->
         <div class="flex-item" id="pomodoro">
             <div id="date"></div>
             <div id="quote"></div>
@@ -41,20 +47,20 @@
             </div>
 
             <div id="overlay"></div>
-
         </div>
 
+        <!-- ==== RIGHT SIDEBAR ==== -->
         <div class="flex-item" id="right-container">
-            <!-- Pages -->
+            <!-- PAGES -->
 
             <!-- To-do Page -->
-            <div class="page" id="page1"> 
-                <h2>Moo-Do List</h2>
-                <ul class="todo-list">
-                  <!--Add new task <li> -->
-                </ul>
-                <button type="submit" id="addTaskButton">Add Task</button>
-              </div>
+            <div class="page" id="page1">
+                  <h2>✅ TODO</h2>
+                  <ul class="todo-list">
+                    <!--Add new task <li> -->
+                  </ul>
+                  <button type="submit" id="addTaskButton">Add Task</button>
+            </div>
 
             <!-- Essential Links -->
             <div class="page" id="page2"> 
@@ -73,21 +79,12 @@
                 Page 3
             </div>
 
-        <div class="flex-item" id="todo">
-            <div class="todo-container"> 
-              <h2>✅ TODO</h2>
-              <ul class="todo-list">
-                <!--Add new task <li> -->
-              </ul>
-              <button type="submit" id="addTaskButton">Add Task</button>
-
             <!-- Pagination Dots -->
             <div class="pagination">
-              <span class="dot" onclick="moveToPage(1)"></span>
-              <span class="dot" onclick="moveToPage(2)"></span>
-              <span class="dot" onclick="moveToPage(3)"></span>
+                <span class="dot" onclick="moveToPage(1)"></span>
+                <span class="dot" onclick="moveToPage(2)"></span>
+                <span class="dot" onclick="moveToPage(3)"></span>
             </div>
-        </div>
     </div>
     
     <!-- Stylesheets and Scripts -->
@@ -95,8 +92,8 @@
     <link rel="stylesheet" href="right-column.css">
     <script src="scripts/script.js"></script>
     <script src="scripts/link_manager.js"></script>
-    <script src="scripts/todo.js"></script>
-    <script src="scripts/right-column.js"></script>
+    <script src="scripts/todo.js" type="module"></script>
+    <script src="scripts/right-column.js" type="module"></script>
 </body>
 </html>
 
