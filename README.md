@@ -29,7 +29,7 @@ Now, every time you open a new tab, LockdIn will take charge, providing a distra
 ## ❤ Contributors
 
 - Jenul Ferdinand - Project Lead / Programmer
-- Louis Fevrier - Programmer (Redactive AI)
+- Louis Fevrier - Programmer
 - Mitchell Augustini - Developer
 - Oliver Bassily - Jr Developer / Marketing
 - King (Zenan) Wu - Jr Developer / Marketing
