@@ -1,18 +1,20 @@
 # LockdIn (Chrome Extension)
+LockdIn aims to enhance the productivity of **Monash University** students by eliminating distractions and prioritizing academic content in the Chrome browser.
 
+## ❓ What is it?
 
+LockdIn functions as a **Chrome Extension**, serving as a new tab override that presents a dedicated landing page each time you open a new tab.
 
-## Goal
+<br/>
+<br/>
 
-LockdIn aims to enhance the productivity of Monash University students by eliminating distractions and prioritizing academic content in the Chrome browser.
+<p align="center">
+<img src="assets/readme/landing-page.png" width=63%/>
+</p>
 
-## How It Works
+<br/>
 
-LockdIn functions as a Chrome Extension, serving as a new tab override that presents a dedicated landing page each time you open a new tab.
-
-<img src="assets/readme/landing-page.png" width=70% style="display: block; margin: 0 auto" />
-
-## Usage
+## 📦 Usage
 
 To use LockdIn, follow these steps:
 
@@ -24,7 +26,7 @@ To use LockdIn, follow these steps:
 
 Now, every time you open a new tab, LockdIn will take charge, providing a distraction-free landing page designed to help you concentrate on your academic tasks.
 
-## Contributors
+## ❤ Contributors
 
 - Jenul Ferdinand - Project Lead / Programmer
 - Louis Fevrier - Programmer (Redactive AI)
