@@ -60,13 +60,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // FUNCTION: Start pomodoro
     function startTimer() {
-        if (!timerRunning) { 
+        if (!timerRunning) {
+            if (paused){
+                pauseButton.textContent = 'Pause';
+            }
             timerRunning = true;
             paused = false;
             runTimer();
-
             logoOn(true);
         }
+        
     }
 
     // FUNCTION: Pause pomodoro
