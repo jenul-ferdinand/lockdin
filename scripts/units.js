@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add event listener to the "Add Moodle Link" button
         addMoodleLinkButton.addEventListener('click', function() {
             // Prompt the user to enter a Moodle link and a Unit name
-            const moodleLink = prompt('Enter the Moodle link:');
-            const unitName = prompt('Enter Unit name:');
+            const moodleLink = prompt('Enter the Moodle link:\n\n(Note: Middle Click the unit button to remove)');
+            const unitName = prompt('Enter Unit name:\n\n(Note: Middle Click the unit button to remove)');
 
             // Add the moodle link if it exists
             if (moodleLink) {
