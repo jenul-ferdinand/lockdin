@@ -12,14 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const resetButton = document.getElementById('reset-button');
     const pauseButton = document.getElementById('pause-button');
     const logo = document.getElementById("logo");
+    const titleCard = document.getElementById("titlecard");
 
     // FUNCTION: Change Logo Type
     function logoOn(bool) {
         logo.style.opacity = 0;
+        titleCard.style.opacity = 0;
 
         setTimeout(() => {
             logo.src = bool ? "assets/page/logo-on.png" : "assets/page/logo-off.png";
+            titleCard.src = bool ? "assets/page/title-card.png" : "assets/page/title-card-dark.png";
 
+            titleCard.style.opacity = 1;
             logo.style.opacity = 1;
         }, 300);
     }
