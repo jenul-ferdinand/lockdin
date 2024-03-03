@@ -8,15 +8,19 @@
     color: white;  
 }
 
+#blurredTxt, #normalTxt {
+    font-size: 16px;
+}
+
 body {
     background-color:#333333;
-    border: 1px solid rgb(157, 157, 157);
+    border: 2px solid rgb(157, 157, 157);
     font-family: "JetBrains Mono", sans-serif;
 }
 
 .subHeading {
     color: white;
-    text-align: top;
+    text-align: center;
 }
 
 .ytIcon{
@@ -41,14 +45,16 @@ body {
 
 #status{
     color: white;
-    padding:5px;
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .flexContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: left;
+    align-items: center;
     border-bottom:
 }
 

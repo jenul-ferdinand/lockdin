@@ -13,7 +13,7 @@
     <form>
     <div class="bigContainer">
       <div id="div1">
-        <h2 class="subHeading" id="headingThumbnail" data-i18n="options_thumbnail_mode">Thumbnail Display Mode</h2>
+        <h2 class="subHeading" id="headingThumbnail" data-i18n="options_thumbnail_mode">YouTube Thumbnails: </h2>
         <div class="flexContainer">
           <input class="ytIcon" id="blurred" type="radio" name="thumbnailMode" value="blurred">
           <label class="iconTxt" id="blurredTxt" for="blurred" data-i18n="options_thumbnail_blurred">Blurred</label><br />
@@ -21,20 +21,20 @@
 
         <div class="flexContainer">
           <input class="ytIcon" id="normal" type="radio" name="thumbnailMode" value="normal">
-          <label class="iconTxt" id="normalTxt" for="normal" data-i18n="options_thumbnail_normal">Normal</label><br />
+          <label class="iconTxt" id="normalTxt" for="normal" data-i18n="options_thumbnail_normal">Normal</label><br /><br />
         </div>
         <br />
       </div>
       <div id="div2">
-        <h2 class="subHeading" id="setStorage" data-i18n="options_setting_storage">Setting Storage</h2>
+        <!-- <h2 class="subHeading" id="setStorage" data-i18n="options_setting_storage">Setting Storage</h2> -->
 
         <div class="flexContainer">
-          <input id="syncSettingsCheck" type="checkbox" name="syncSettings">
-          <label id="syncSettings" for="syncSettings" data-i18n="options_sync">Sync browser settings</label><br />
+          <input id="syncSettingsCheck" type="checkbox" name="syncSettings" hidden="true">
+          <label id="syncSettings" for="syncSettings" data-i18n="options_sync" hidden="true">Sync browser settings</label><br />
         </div>
         <br />
         <div class="flexContainer">
-          <p id="status">✅ <span data-i18n="options_loaded">Preferences loaded</span></p>
+          <p id="status">✅ <span data-i18n="options_loaded"></span></p>
         </div>
       </div>
     </div>
