@@ -151,6 +151,15 @@ button {
   margin-bottom: 5px;
 }
 
+#start-button {
+
+}
+
+#start-button:hover, #start-button:focus, #start-button:active {
+  transition: background-color 0.3s ease-in-out;
+  background-color: rgb(255, 53, 82);
+}
+
 .timer-button {
   width: 100px;
   text-align:center;
@@ -184,7 +193,7 @@ button {
 }
 
 .modal-header {
-  padding: 10px 15px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -204,7 +213,6 @@ button {
   background: none;
   font-size: 2.25rem;
   font-weight: bold;
-  /*width: auto;*/
   margin: 0;
   width: fit-content; 
   height: fit-content; 
@@ -226,11 +234,6 @@ button {
   border-bottom: 1px solid black;
 }
 
-.custom-modal-heading {
-  font-size: 16px;
-  margin-bottom: 2px;
-}
-
 .custom-modal-input {
   padding: 3px;
   border: 2px solid transparent;
@@ -239,7 +242,12 @@ button {
 }
 
 .custom-modal-input:focus {
-  border-color: red;
+  border-color: rgb(255, 53, 82);
+}
+
+.custom-modal-heading {
+  font-size: 16px;
+  margin-bottom: 2px;
 }
 
 #custom-modal-heading-break {
@@ -267,7 +275,7 @@ button {
   -webkit-transform: scale(1.05);
   transition: background-color 0.3s ease;
   transform: scale(1.05);
-  background-color: red;
+  background-color: rgb(255, 53, 82);
 }
 
 #overlay {
