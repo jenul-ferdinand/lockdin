@@ -77,10 +77,6 @@ h1 {
 	flex: 2;
 }
 
-button:hover {
-	background-color: #777;
-}
-
 #center-title {
   text-align: center;
   color: darkcyan;
@@ -114,6 +110,7 @@ button {
 }
 
 #addMoodleLinkButton {
+  margin-bottom: 20px;
   font-weight: bold;
   background-color: #1E90FF;
   text-align: center;
@@ -128,12 +125,16 @@ button {
 .moodle-link {
   background-color: #f0f0f0;
   color: #007bff;
-  margin: 8px, 0px;
+  margin: 8px 0px;
   text-align: center;
   text-decoration: none;
   border-radius: 5px; /* Rounded corners for the link background */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  /*transition: background-color 0.3s, box-shadow 0.3s;  Smooth transition for hover effects */
+}
+
+.moodle-link:hover {
+	background-color: #c0c0c0;
 }
 
 #addMoodleLinkButton:hover, #addMoodleLinkButton:focus, #addMoodleLinkButton:active {
@@ -173,7 +174,7 @@ button {
   border: 1px solid black;
   border-radius: 10px;
   z-index: 10;
-  background-color: grey;
+  background-color: #333333;
   width: 500px;
   max-width: 80%;
 }
@@ -220,6 +221,10 @@ button {
 
 #custom-modal-input {
   margin-bottom: 10px;
+}
+
+#custom-save-button {
+  
 }
 
 #overlay {
