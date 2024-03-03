@@ -3,7 +3,7 @@ LockdIn aims to enhance the productivity of **Monash University** students by el
 
 ## ❓ What is it?
 
-LockdIn functions as a **Chrome Extension**, serving as a new tab override that presents a dedicated landing page each time you open a new tab.
+LockdIn functions as a **Chrome Extension**, serving as a new tab override that presents a dedicated landing page each time you open a new tab. LockdIn provides a Monash Universtiy student with every tool they could need to ensure a productive study session, including links to your units, a pomodoro timer, todo list, Monash essential links, and even the weather. It also blurs your YouTube thumbnails, to prevent you from getting distracted while watching a tutorial or other educational video. 
 
 <br/>
 <br/>
