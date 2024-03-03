@@ -21,7 +21,7 @@
         <!-- MIDDLE PANE -->
         <div class="flex-item" id="pomodoro">
 			<!-- Top Title Card -->
-            <img id="titlecard" src="assets/page/title-card.png">
+            <img id="titlecard" src="assets/page/title-card-dark.png">
 
 			<!-- Center Logo-->
 			<div class="logo-container">
@@ -75,17 +75,31 @@
             <div class="page" id="page2"> 
               <h1 id="essential-links-title">🎓 Essential Monash Links</h1>
                 <ul class="essential-links">
-                    <li><a href="https://my.monash/campusm/home#menu" target="_blank">my.monash Home Page</a></li>
+                    <li><a href="https://my.monash/campusm/home#menu" target="_blank">Monash Home Page</a></li>
                     <li><a href="https://www.monash.edu/students/admin/timetables/allocate/login" target="_blank">Allocate+</a></li>
                     <li><a href="https://my.monash.edu/wes/" target="_blank">WES</a></li>
                     <li><a href="https://eassessment.monash.edu/my/" target="_blank">eAssessment</a></li>
-                    <li><a href="https://learning.monash.edu/my/" target="_blank">Monash Dashboard</a></li>
+                    <li><a href="https://my.monash.edu/news-and-events/bookings/?_ga=2.119902799.639275135.1536030452-584051056.1536030452" target="_blank">Monash Booking Systems</a></li>
+                    <li><a href="https://www.monash.edu/learning-teaching/TeachHQ/learning-technologies/move" target="_blank">MoVE</a></li>
+                    <li><a href="https://www.monash.edu/library" target="_blank">Monash library</a></li>
+                    <li><a href="https://connect.monash.edu/s/" target="_blank">ask.monash</a></li>
+                    <li><a href="https://www.monash.edu/esolutions" target="_blank">IT Support</a></li>
                 </ul>
             </div>
 
-            <!-- Calendar Page -->
+            <!-- Weather Page -->
             <div class="page" id="page3">
-                Page 3
+
+                <div class="weather-container">
+                    <h1>Monash Weather</h1>
+                    <div class="weather-data">
+                        <p id="location">Monash University, Clayton</p>
+                        <p id="temperature"></p>
+                        <p id="description"></p>
+                    </div>
+                    <img id = "icon" src = "">
+                </div>
+
             </div>
 
             <!-- Pagination Dots -->
@@ -113,7 +127,8 @@
     <script src="scripts/units.js"></script>
     <script src="scripts/todo.js" type="module"></script>
     <script src="scripts/rightbar.js"></script>
-    <scirpt src="scripts/effects/confetti.js" type="module"></scirpt>
+    <script src="scripts/effects/confetti.js" type="module"></script>
+    <script src="scripts/getweather.js"></script>
 </body>
 </html>
 

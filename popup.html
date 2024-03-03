@@ -3,24 +3,48 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <div class="headContainer">
+      <img src="assets\popup\lockdin-icon.png" id="lockdinIcon"></img>
+      <h1 id="title">Lockdin</h1>
+    </div>
   </head>
 
   <body>
     <form>
-      <p data-i18n="options_thumbnail_mode">Thumbnail display mode</p>
-      <input type="radio" name="thumbnailMode" id="blurred" value="blurred">
-      <label for="blurred" data-i18n="options_thumbnail_blurred">Blurred</label><br />
-      <input type="radio" name="thumbnailMode" id="normal" value="normal">
-      <label for="normal" data-i18n="options_thumbnail_normal">Normal</label><br />
-      <br />
-      <p data-i18n="options_setting_storage">Setting storage</p>
-      <input type="checkbox" name="syncSettings" id="syncSettings">
-      <label for="syncSettings" data-i18n="options_sync">Sync browser settings</label><br />
-      <br />
-      <p id="status">✅ <span data-i18n="options_loaded">Preferences loaded</span></p>
-    </form>
+    <div class="bigContainer">
+      <div id="div1">
+        <h2 class="subHeading" id="headingThumbnail" data-i18n="options_thumbnail_mode">YouTube Thumbnails: </h2>
+        <div class="flexContainer">
+          <input class="ytIcon" id="blurred" type="radio" name="thumbnailMode" value="blurred">
+          <label class="iconTxt" id="blurredTxt" for="blurred" data-i18n="options_thumbnail_blurred">Blurred</label><br />
+        </div>
 
+        <div class="flexContainer">
+          <input class="ytIcon" id="normal" type="radio" name="thumbnailMode" value="normal">
+          <label class="iconTxt" id="normalTxt" for="normal" data-i18n="options_thumbnail_normal">Normal</label><br /><br />
+        </div>
+        <br />
+      </div>
+      <div id="div2">
+        <!-- <h2 class="subHeading" id="setStorage" data-i18n="options_setting_storage">Setting Storage</h2> -->
+
+        <div class="flexContainer">
+          <input id="syncSettingsCheck" type="checkbox" name="syncSettings" hidden="true">
+          <label id="syncSettings" for="syncSettings" data-i18n="options_sync" hidden="true">Sync browser settings</label><br />
+        </div>
+        <br />
+        <div class="flexContainer">
+          <p id="status">✅ <span data-i18n="options_loaded"></span></p>
+        </div>
+      </div>
+    </div>
+    </form>
+    <!-- jetbrains mono Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <!-- Scripts and Styles -->
+    <link rel="stylesheet" href="popup.css"> 
     <script src="scripts/thumbcommon.js"></script>
     <script src="scripts/options.js"></script>
   </body>

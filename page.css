@@ -27,6 +27,8 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 
@@ -120,6 +122,17 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   -webkit-transition-duration: 0.3s;
   -webkit-transition-property:box-shadow, transform;
+}
+
+.moodle-link {
+  background-color: #f0f0f0;
+  color: #007bff;
+  margin: 8px, 0px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  transition: background-color 0.3s, box-shadow 0.3s; 
 }
 
 #addMoodleLinkButton:hover, #addMoodleLinkButton:focus, #addMoodleLinkButton:active {
