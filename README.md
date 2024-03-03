@@ -31,7 +31,7 @@ Now, every time you open a new tab, LockdIn will take charge, providing a distra
 - Jenul Ferdinand - Project Lead / Programmer
 - Louis Fevrier - Programmer
 - Mitchell Augustini - Developer
+- King (Zenan) Wu - Developer / Marketing
 - Oliver Bassily - Jr Developer / Marketing
-- King (Zenan) Wu - Jr Developer / Marketing
-
+  
 ---
