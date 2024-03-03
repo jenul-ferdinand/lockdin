@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Pomodoro properties
     let timer;
-    let timeLeft = 25 * 60; // Initial time: 25 minutes, will make custom
+    let timeLeft = 25 * 60; // Initial time: 25 minutes
     let timerRunning = false;
     let paused = false;
     let rest = false;
@@ -11,12 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const startButton = document.getElementById('start-button');
     const resetButton = document.getElementById('reset-button');
     const pauseButton = document.getElementById('pause-button');
+    const logo = document.getElementById("logo");
 
     // FUNCTION: Change Logo Type
     function logoOn(bool) {
-        var logo = document.getElementById("logo");
+        logo.style.opacity = 0;
 
-        if (bool) { logo.src = "assets/page/logo-on.png" } else { logo.src = "assets/page/logo-off.png" }
+        setTimeout(() => {
+            logo.src = bool ? "assets/page/logo-on.png" : "assets/page/logo-off.png";
+
+            logo.style.opacity = 1;
+        }, 300);
     }
 
     // FUNCTION: Display pomodoro time left

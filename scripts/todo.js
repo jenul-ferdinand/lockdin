@@ -1,3 +1,5 @@
+import { start, stop } from '/scripts/effects/confetti.js'
+
 document.addEventListener('DOMContentLoaded', function() {
     // Contains the add task button tag
     const addTaskButton = document.getElementById('addTaskButton');
@@ -10,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Setup task and todo system
     taskSetup()
-
 
 
     // FUNCTION: Save tasks strings to chrome storage array
@@ -41,9 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
         chrome.storage.local.get({ tasks: [] }, function (data) {
             // Store the tasks data list
             const tasks = data.tasks;
+            var taskIndex = 0;
 
             // Store the index of the text
-            const taskIndex = tasks.indexOf(text); 
+            taskIndex = tasks.indexOf(text); 
+    
 
             // Check if the index is found
             if (taskIndex !== -1) {
@@ -95,12 +98,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
             // Delete button functionality
             deleteButton.addEventListener('click', function() {
+                start(50);
+                stop(200);
+
+                removeTaskFromStorage(taskContent.textContent)
                 todoList.removeChild(task);
             });
     
     
             // Typing and input height management
-            input.addEventListener('input', function() {
+            input.addEventListener('input', function() {      
                 input.style.height = 'auto';
                 input.style.height = input.scrollHeight + 'px';
             });
@@ -152,6 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         deleteButton.addEventListener('click', function () {
             console.log("Trying to remove", task)
+
+            start(50);
+            stop(200)
 
             removeTaskFromStorage(text);
 
