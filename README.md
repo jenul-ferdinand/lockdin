@@ -35,7 +35,7 @@ Now, every time you open a new tab, LockdIn will take charge, providing a distra
 - Oliver Bassily - Jr Developer / Marketing
 
 
-  ## 📚 References
+## 📚 References
 
 - https://openweathermap.org/api
 ---
