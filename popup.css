@@ -1,0 +1,77 @@
+#lockdinIcon {
+    height: 70px;
+    width: 70px;
+    padding-top: 20px;
+}
+
+#title {
+    color: white;  
+}
+
+#blurredTxt, #normalTxt {
+    font-size: 16px;
+}
+
+body {
+    background-color:#333333;
+    border: 2px solid rgb(157, 157, 157);
+    font-family: "JetBrains Mono", sans-serif;
+}
+
+.subHeading {
+    color: white;
+    text-align: center;
+}
+
+.ytIcon{
+
+}
+
+.iconTxt {
+    color: white;
+    padding: 10px;
+}
+
+
+
+#syncSettingsCheck{
+
+}
+
+#syncSettings{
+    color: white;
+    padding: 10px;
+}
+
+#status{
+    color: white;
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom:
+}
+
+.bigContainer{
+    display: flex;
+    height: 150px;
+    width: 500px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+    gap: 10px;
+}
+
+.headContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
