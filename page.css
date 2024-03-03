@@ -122,6 +122,12 @@ button {
   -webkit-transition-property:box-shadow, transform;
 }
 
+#addMoodleLinkButton:hover, #addMoodleLinkButton:focus, #addMoodleLinkButton:active {
+  box-sizing: 0 0 20px rbga(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
 .moodle-link {
   background-color: #f0f0f0;
   color: #007bff;
@@ -137,12 +143,6 @@ button {
 	background-color: #c0c0c0;
 }
 
-#addMoodleLinkButton:hover, #addMoodleLinkButton:focus, #addMoodleLinkButton:active {
-  box-sizing: 0 0 20px rbga(0, 0, 0, 0.5);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
 /* POMDORO */
 #timer-buttons {
   height: 80px;
@@ -153,7 +153,7 @@ button {
 
 .timer-button {
   width: 100px;
-  text-align: center;
+  text-align:center;
 }
 
 #custom-button {
@@ -202,10 +202,21 @@ button {
   border: none;
   outline: none;
   background: none;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   font-weight: bold;
-  width: auto;
+  /*width: auto;*/
   margin: 0;
+  width: fit-content; 
+  height: fit-content; 
+  overflow: hidden;
+}
+
+.close-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-button:hover {
+  transform: scale(1.25);
 }
 
 .modal-body {
@@ -215,16 +226,48 @@ button {
   border-bottom: 1px solid black;
 }
 
-#custom-modal-heading {
-  margin-bottom: 500px;
+.custom-modal-heading {
+  font-size: 16px;
+  margin-bottom: 2px;
 }
 
-#custom-modal-input {
-  margin-bottom: 10px;
+.custom-modal-input {
+  padding: 3px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.custom-modal-input:focus {
+  border-color: red;
+}
+
+#custom-modal-heading-break {
+  margin-top: 15px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #custom-save-button {
-  
+  font-size: 16px;
+  text-align: center;
+  margin: 15px;
+  width: 98%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property:box-shadow, transform;
+}
+
+#custom-save-button:hover, #custom-save-button:focus, #custom-save-button:active {
+  box-sizing: 0 0 20px rbga(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transition: background-color 0.3s ease;
+  transform: scale(1.05);
+  background-color: red;
 }
 
 #overlay {
