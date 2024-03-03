@@ -165,4 +165,11 @@ button:hover {
     margin-right: 5%;
 }
 
+.weather-container {
+    text-align: center;
+    margin-top: 50px;
+}
 
+.weather-data {
+    margin-top: 20px;
+}
