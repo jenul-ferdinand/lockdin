@@ -131,9 +131,9 @@ button {
   margin: 8px, 0px;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px; /* Rounded corners for the link background */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  transition: background-color 0.3s, box-shadow 0.3s; 
 }
 
 #addMoodleLinkButton:hover, #addMoodleLinkButton:focus, #addMoodleLinkButton:active {
