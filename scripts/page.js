@@ -64,24 +64,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // FUNCTION: Start pomodoro
     function startTimer() {
-        if (!timerRunning) { 
+        if (!timerRunning) {
+            if (paused){
+                pauseButton.textContent = 'Pause';
+            }
             timerRunning = true;
             paused = false;
             runTimer();
-
             logoOn(true);
         }
+        
     }
 
     // FUNCTION: Pause pomodoro
     function pauseTimer() {
         if (!paused) {
+            if (timerRunning){
             clearInterval(timer);
             paused = true;
             timerRunning = false;
             pauseButton.textContent = 'Resume';
 
             logoOn(false);
+            }
         }
         else {
             pauseButton.textContent = 'Pause';
