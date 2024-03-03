@@ -10,6 +10,11 @@
 
 #blurredTxt, #normalTxt {
     font-size: 16px;
+    position: absolute;
+}
+
+#blurredTxt {
+    padding-left: 19px;
 }
 
 body {
@@ -23,19 +28,9 @@ body {
     text-align: center;
 }
 
-.ytIcon{
-
-}
-
 .iconTxt {
     color: white;
     padding: 10px;
-}
-
-
-
-#syncSettingsCheck{
-
 }
 
 #syncSettings{
@@ -55,7 +50,6 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-bottom:
 }
 
 .bigContainer{
@@ -73,5 +67,4 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
