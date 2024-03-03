@@ -46,9 +46,9 @@
                 </div>
                 <div class="modal-body">
                     <b class="custom-modal-heading">Study</b>
-                    <input id="custom-modal-input-study" type="number">
-                    <b class="custom-modal-heading">Break</b>
-                    <input id="custom-modal-input-break" type="number">
+                    <input class="custom-modal-input" id="custom-modal-input-study" type="number">
+                    <b class="custom-modal-heading" id="custom-modal-heading-break">Break</b>
+                    <input class="custom-modal-input" id="custom-modal-input-break" type="number">
                 </div>
                 <div class="modal-footer">
                     <button data-close-button id="custom-save-button">Save</button>
@@ -64,7 +64,7 @@
             <!-- To-do Page -->
             <div class="page" id="page1">
                   <h1>📜 Todo List</h1>
-                  <button type="submit" id="addTaskButton">Add Task</button>
+                  <button type="submit" id="add-task-button">Add Task</button>
                   <ul class="todo-list">
                     <!--Add new task <li> -->
                   </ul>
@@ -73,7 +73,7 @@
 
             <!-- Essential Links -->
             <div class="page" id="page2"> 
-              <h1>🎓 Essential M-Links</h1>
+              <h1 id="essential-links-title">🎓 Essential Monash Links</h1>
                 <ul class="essential-links">
                     <li><a href="https://my.monash/campusm/home#menu" target="_blank">Monash Home Page</a></li>
                     <li><a href="https://www.monash.edu/students/admin/timetables/allocate/login" target="_blank">Allocate+</a></li>
@@ -110,11 +110,13 @@
             </div>
 
             <!-- Page Arrows -->
-            <!-- Left Arrow -->
-            <img src="assets/page/rightbar/right-arrow.png" class="page-arrow" id="left-arrow" alt="Left Arrow" style="transform: rotate(180deg); -webkit-filter: invert(100%)">
+            <div id="arrow-container">
+                <!-- Left Arrow -->
+                <img src="assets/page/rightbar/left-arrow.png" class="page-arrow" id="left-arrow" alt="Left Arrow">
 
-            <!-- Right Arrow -->
-            <img src="assets/page/rightbar/right-arrow.png" class="page-arrow" id="right-arrow" alt="Right Arrow" style="-webkit-filter: invert(100%)">
+                <!-- Right Arrow -->
+                <img src="assets/page/rightbar/right-arrow.png" class="page-arrow" id="right-arrow" alt="Right Arrow">
+            </div>
         </div>
     </div>
 

@@ -2,7 +2,7 @@ import { start, stop } from '/scripts/effects/confetti.js'
 
 document.addEventListener('DOMContentLoaded', function() {
     // Contains the add task button tag
-    const addTaskButton = document.getElementById('addTaskButton');
+    const addTaskButton = document.getElementById('add-task-button');
     // Contains the todo list divider
     const todoList = document.querySelector('.todo-list');
 

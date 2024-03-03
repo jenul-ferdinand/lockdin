@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!rest) {
                     rest = true;
                     timeLeft = breakTimeSeconds;
-                    alert('Break!');
+                    alert('Take a break!');
                 }
                 else {
                     rest = false;

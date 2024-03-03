@@ -79,10 +79,6 @@ h1 {
 	flex: 2;
 }
 
-button:hover {
-	background-color: #777;
-}
-
 #center-title {
   text-align: center;
   color: darkcyan;
@@ -116,6 +112,7 @@ button {
 }
 
 #addMoodleLinkButton {
+  margin-bottom: 20px;
   font-weight: bold;
   background-color: #1E90FF;
   text-align: center;
@@ -144,6 +141,21 @@ button {
   transform: scale(1.05);
 }
 
+.moodle-link {
+  background-color: #f0f0f0;
+  color: #007bff;
+  margin: 8px 0px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners for the link background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  /*transition: background-color 0.3s, box-shadow 0.3s;  Smooth transition for hover effects */
+}
+
+.moodle-link:hover {
+	background-color: #c0c0c0;
+}
+
 /* POMDORO */
 #timer-buttons {
   height: 80px;
@@ -152,9 +164,14 @@ button {
   margin-bottom: 5px;
 }
 
+#start-button:hover {
+  transition: background-color 0.3s ease-in-out;
+  background-color: rgb(255, 53, 82);
+}
+
 .timer-button {
   width: 100px;
-  text-align: center;
+  text-align:center;
 }
 
 #custom-button {
@@ -175,7 +192,7 @@ button {
   border: 1px solid black;
   border-radius: 10px;
   z-index: 10;
-  background-color: grey;
+  background-color: #333333;
   width: 500px;
   max-width: 80%;
 }
@@ -185,7 +202,7 @@ button {
 }
 
 .modal-header {
-  padding: 10px 15px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -203,10 +220,20 @@ button {
   border: none;
   outline: none;
   background: none;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   font-weight: bold;
-  width: auto;
   margin: 0;
+  width: fit-content; 
+  height: fit-content; 
+  overflow: hidden;
+}
+
+.close-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-button:hover {
+  transform: scale(1.25);
 }
 
 .modal-body {
@@ -216,12 +243,48 @@ button {
   border-bottom: 1px solid black;
 }
 
-#custom-modal-heading {
-  margin-bottom: 500px;
+.custom-modal-input {
+  padding: 3px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  outline: none;
 }
 
-#custom-modal-input {
-  margin-bottom: 10px;
+.custom-modal-input:focus {
+  border-color: rgb(255, 53, 82);
+}
+
+.custom-modal-heading {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+#custom-modal-heading-break {
+  margin-top: 15px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#custom-save-button {
+  font-size: 16px;
+  text-align: center;
+  margin: 15px;
+  width: 98%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property:box-shadow, transform;
+}
+
+#custom-save-button:hover {
+  box-sizing: 0 0 20px rbga(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+  transition: background-color 0.3s ease;
+  transform: scale(1.05);
+  background-color: rgb(255, 53, 82);
 }
 
 #overlay {
