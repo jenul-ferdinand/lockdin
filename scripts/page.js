@@ -75,12 +75,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // FUNCTION: Pause pomodoro
     function pauseTimer() {
         if (!paused) {
+            if (timerRunning){
             clearInterval(timer);
             paused = true;
             timerRunning = false;
             pauseButton.textContent = 'Resume';
 
             logoOn(false);
+            }
         }
         else {
             pauseButton.textContent = 'Pause';
